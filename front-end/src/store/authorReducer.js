@@ -24,7 +24,7 @@ const deleteAuthorFromNotFollowing = (id) => ({
 })
 
 export const getAllAuthorFollowing = () => async (dispatch) => {
-    const res = await fetch("/api/author-following")
+    const res = await fetch("/api/author/following")
     if (res.ok) {
         const data = await res.json()
         dispatch(getAuthorFollowing(data))
@@ -33,7 +33,7 @@ export const getAllAuthorFollowing = () => async (dispatch) => {
 }
 
 export const getAllAuthorNotFollowing = () => async (dispatch) => {
-    const res = await fetch("/api/author-not-following")
+    const res = await fetch("/api/author/not-following")
     if (res.ok) {
         const data = await res.json()
         dispatch(getAuthorNotFollowing(data))
@@ -42,7 +42,7 @@ export const getAllAuthorNotFollowing = () => async (dispatch) => {
 }
 
 export const deleteAllAuthorNotFollowing = (id) => async (dispatch) => {
-    const res = await fetch(`/api/author-not-following/${id}`,
+    const res = await fetch(`/api/author/not-following/${id}`,
     {
         method: 'DELETE',
         headers: {
@@ -57,7 +57,7 @@ export const deleteAllAuthorNotFollowing = (id) => async (dispatch) => {
 }
 
 export const addAuthorFollowing = (author) => async (dispatch) => {
-    const res = await fetch("/api/author-following", {
+    const res = await fetch("/api/author/following", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -89,6 +89,7 @@ const authorReducer = (state = initialState, {type, payload})=>{
             newComment[payload.id] = payload
 
         return {...state, newComment}
+        default: return state
     }
 } 
 export default authorReducer

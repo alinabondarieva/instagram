@@ -5,7 +5,7 @@ import authorReducer from "./authorReducer";
 const rootReducer = combineReducers({
 comments: commentsReducer,
 author: authorReducer,
-// posts: postReducer
+posts: postReducer
 });
 
 export default rootReducer;

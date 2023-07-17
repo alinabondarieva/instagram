@@ -49,7 +49,7 @@ const commentsReducer = (state = initialState, {type, payload})=>{
             newComment[payload.id] = payload
 
         return {...state, newComment}
-        default: state
+        default: return state
     }
 } 
 export default commentsReducer
