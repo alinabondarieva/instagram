@@ -1,0 +1,25 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "instagram",
+    "main": "index.js",
+    "scripts": {
+        "start": "per-env",
+        "start:development": "nodemon ./bin/www",
+        "start:production": "node ./bin/www",
+        "build": "node psql-setup-script.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.2",
+        "express-async-errors": "^3.1.1",
+        "formik": "^2.4.2",
+        "mongodb": "^5.7.0"
+    },
+    "devDependencies": {
+        "dotenv-cli": "^7.0.0",
+        "nodemon": "^2.0.20"
+    }
+}
