@@ -9,7 +9,7 @@ import { PostsPage } from "./pages/postPage";
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout/>}>
-            <Route exact path="/" element={<HomePage/>}/>
+            <Route path="/" element={<HomePage/>}/>
             <Route path="/posts/:id" element={<PostsPage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
         </Route>

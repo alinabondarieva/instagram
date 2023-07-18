@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
         path.resolve(__dirname, '../../frontend', 'build', 'index.html')
       );
     });
-  
+    
     router.use(express.static(path.resolve("../frontend/build")));
   
     router.get(/^(?!\/?api).*/, (req, res) => {

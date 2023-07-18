@@ -77,18 +77,30 @@ const initialState = {
 
 const authorReducer = (state = initialState, {type, payload})=>{
     switch (type){
-        case GET_COMMENTS: 
-        const newState = payload.reduce((acc, cur) => {
+        case GET_AUTHOR_FOLLOWING: 
+        const followingState = payload.reduce((acc, cur) => {
             acc[cur.id] = cur
             return acc
         }, {})
-        return newState
+        return followingState
 
-        case CREATE_COMMENT:
-            const newComment = {}
-            newComment[payload.id] = payload
+        case GET_AUTHOR_NOT_FOLLOWING: 
+        const notFollowingState = payload.reduce((acc, cur) => {
+            acc[cur.id] = cur
+            return acc
+        }, {})
+        return notFollowingState
 
-        return {...state, newComment}
+        case DELETE_AUTHOR_FROM_NOT_FOLLOWING: 
+        const deleteFollowingState = {...state}
+        delete deleteFollowingState.notFollowing[payload.id]
+        return deleteFollowingState
+
+        case ADD_AUTHOR_TO_FOLLOWING:
+            const newAuthor = {}
+            newAuthor[payload.id] = payload
+
+        return {...state, newAuthor}
         default: return state
     }
 } 

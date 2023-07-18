@@ -6,4 +6,4 @@ const PostList = () => {
   )
 }
 
-export default PostList
+export default PostList 
