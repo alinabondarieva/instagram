@@ -24,7 +24,8 @@ const deleteAuthorFromNotFollowing = (id) => ({
 })
 
 export const getAllAuthorFollowing = () => async (dispatch) => {
-    const res = await fetch("/api/author/following")
+    const res = await fetch("http://localhost:3000/api/author")
+    console.log(res);
     if (res.ok) {
         const data = await res.json()
         dispatch(getAuthorFollowing(data))

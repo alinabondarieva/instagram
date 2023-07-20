@@ -1,20 +1,25 @@
 const express = require("express")
 const router = express.Router()
-router.get('/following', (req, res) => {
-
+const Author = require("../../model/Author")
+router.get('/author', async (req, res) => {
+    console.log(req);
+    const author = await Author.find({})
+    console.log(author);
+    return res.status(200).json(author)
 })
-router.get('/not-following', (req, res) => {
 
+router.put('/author/:id', async (req, res) => {
+    const author = await Author.findById(req.params.id)
+    author.following = !author.following
+    await author.save()
+    return res.status(200).json(author)
 })
-router.post('/following', (req, res) => {
 
+router.delete('/author/:id', async (req, res) => {
+    const author = await Author.deleteOne(req.params.id)
+    return res.status(200).json({"message": "succsessful delete"})
 })
-router.post('/not-following', (req, res) => {
 
-})
-router.delete('/following', (req, res) => {
 
-})
-router.delete('/not-following', (req, res) => {
 
-})
+module.exports = router
