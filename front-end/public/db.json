@@ -1,0 +1,207 @@
+{
+    "authors": [
+        {
+            "id": 1,
+            "name": "alina",
+            "following": false,
+            "posts": [
+                {
+                    "id": "post1",
+                    "title": "view",
+                    "text": "great view",
+                    "imageUrl": "./50ph/0ae1d3b808de35bedd70375c4b73739a.jpg",
+                    "comments": [
+                        {
+                            "id": "comm1",
+                            "comment": "wow"
+                        },
+                        {
+                            "id": "comm11",
+                            "comment": "super"
+                        },
+                        {
+                            "id": "comm23",
+                            "comment": "likke"
+                        },
+                        {
+                            "id": "comm24",
+                            "comment": "amazing"
+                        }
+                    ]
+                },
+                {
+                    "id": "post2",
+                    "title": "mountains",
+                    "text": "green mountain",
+                    "imageUrl": "./50ph/1ccafe1690016cf522bd15822fd4515c.jpg",
+                    "comments": [
+                        {
+                            "id": "comm1",
+                            "comment": "super"
+                        },
+                        {
+                            "id": "comm12",
+                            "comment": "like"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "vera",
+            "following": false,
+            "posts": [
+                {
+                    "id": "post3",
+                    "title": "sea",
+                    "text": "water",
+                    "imageUrl": "./50ph/2eebc76fc93f46f72b6c9ae3965d5471.jpg",
+                    "comments": [
+                        {
+                            "id": "comm3",
+                            "comment": "blue water"
+                        },
+                        {
+                            "id": "comm14",
+                            "comment": "wow"
+                        }
+                    ]
+                },
+                {
+                    "id": "post4",
+                    "title": "beach",
+                    "text": "white sand",
+                    "imageUrl": "./50ph/4c3286d5088818d919eacd2fffd7c8cf.jpg",
+                    "comments": [
+                        {
+                            "id": "comm4",
+                            "comment": "like"
+                        },
+                        {
+                            "id": "comm15",
+                            "comment": "great"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "nika",
+            "following": false,
+            "posts": [
+                {
+                    "id": "post5",
+                    "title": "book",
+                    "text": "brown book",
+                    "imageUrl": "./50ph/4ca86c5fffaa849f6ada018c11dc7338.jpg",
+                    "comments": [
+                        {
+                            "id": "comm5",
+                            "comment": "history"
+                        },
+                        {
+                            "id": "comm16",
+                            "comment": "studying"
+                        }
+                    ]
+                },
+                {
+                    "id": "post6",
+                    "title": "library",
+                    "text": "big library",
+                    "imageUrl": "./50ph/5df4a2917390d09651db6acdedae708f.jpg",
+                    "comments": [
+                        {
+                            "id": "comm6",
+                            "comment": "fun"
+                        },
+                        {
+                            "id": "comm17",
+                            "comment": "wow"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "timur",
+            "following": false,
+            "posts": [
+                {
+                    "id": "post7",
+                    "title": "computer",
+                    "text": "grey day",
+                    "imageUrl": "./50ph/6a5f54081a3e9af287b35707e8a040e9.jpg",
+                    "comments": [
+                        {
+                            "id": "comm7",
+                            "comment": "sad"
+                        },
+                        {
+                            "id": "comm18",
+                            "comment": "good luck"
+                        }
+                    ]
+                },
+                {
+                    "id": "post8",
+                    "title": "it",
+                    "text": "working",
+                    "imageUrl": "./50ph/7bd1f3fd4905ef19f8b1664bd63ae8ae.jpg",
+                    "comments": [
+                        {
+                            "id": "comm8",
+                            "comment": "wow"
+                        },
+                        {
+                            "id": "comm20",
+                            "comment": "sad"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "jake",
+            "following": false,
+            "posts": [
+                {
+                    "id": "post9",
+                    "title": "math",
+                    "text": "calculating",
+                    "imageUrl": "./50ph/7d88907d67e4fefb212b5d6900e65c0b.jpg",
+                    "comments": [
+                        {
+                            "id": "comm9",
+                            "comment": "good luck"
+                        },
+                        {
+                            "id": "comm21",
+                            "comment": "wow"
+                        }
+                    ]
+                },
+                {
+                    "id": "post10",
+                    "title": "economics",
+                    "text": "studying",
+                    "imageUrl": "./50ph/7e2f6b8ca1acc9efd222920fda35bf23.jpg",
+                    "comments": [
+                        {
+                            "id": "comm10",
+                            "comment": "super"
+                        },
+                        {
+                            "id": "comm22",
+                            "comment": "great"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

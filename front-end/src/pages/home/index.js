@@ -1,5 +1,10 @@
 import React from "react";
+import {AuthorList} from "../../components/author-list"
+import PostList from "../../components/post-list"
 
 export function HomePage() {
-    return(<h2>HomePage</h2>)
+    return(<>
+    <PostList/>
+    <AuthorList/>
+    </>)
 }
