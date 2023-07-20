@@ -4,9 +4,9 @@ import authorReducer from "./authorReducer";
 import postReducer from "./postReducer";
 
 const rootReducer = combineReducers({
-comments: commentsReducer,
-author: authorReducer,
-posts: postReducer
+// comments: commentsReducer,
+authors: authorReducer,
+// posts: postReducer
 });
 
 export default rootReducer;
