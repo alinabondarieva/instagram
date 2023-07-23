@@ -3,14 +3,15 @@ const {Schema, model} = require("mongoose")
 const schema = new Schema({
     nickName: {
         type: String,
-        required: true
+        required: true,
+        
     },
     following: {
         type: Boolean,
         default: false
     },
-    posts:{
-        type: Array
+    imageUrl: {
+        type: String,
     }
 })
 

@@ -1,35 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import thunk from "redux-thunk";
-import rootReducer from "./store/rootReducer";
-import { createStore, applyMiddleware, compose } from "redux";
-// import 'normalize.css';
+import configureStore from "./store/rootReducer"
+import './index.css';
 
 import { App } from "./App";
 import { Provider } from "react-redux";
 
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import { PersistGate } from "redux-persist/integration/react";
-
-const persistConfig = {
-    key: "root",
-    storage,
-    whitelist: ["userData"],
-};
-
-const persistedReducer = persistReducer(persistConfig, rootReducer);
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-export const store = createStore(persistedReducer, composeEnhancers(applyMiddleware(thunk)));
-
-const persistor = persistStore(store);
+const store = configureStore();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-                <App/>
-        </PersistGate>
+        <App />
     </Provider>
 );

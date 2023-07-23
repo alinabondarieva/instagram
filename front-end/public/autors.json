@@ -1,0 +1,62 @@
+[
+        {
+ 
+            "nickName": "alina",
+        "following": false,
+        "imageUrl": "./50ph/0ae1d3b808de35bedd70375c4b73739a.jpg"
+    },
+    {
+
+        "nickName": "vera",
+        "following": false,
+        "imageUrl": "./50ph/2eebc76fc93f46f72b6c9ae3965d5471.jpg"
+    },
+    {
+
+        "nickName": "nika",
+        "following": false,
+        "imageUrl": "./50ph/4ca86c5fffaa849f6ada018c11dc7338.jpg"
+    },
+    {
+
+        "nickName": "timur",
+        "following": false,
+        "imageUrl": "./50ph/6a5f54081a3e9af287b35707e8a040e9.jpg"
+    },
+    {
+
+        "nickName": "jake",
+        "following": false,
+        "imageUrl": "./50ph/7d88907d67e4fefb212b5d6900e65c0b.jpg"
+    },
+    {
+        
+        "nickName": "denis",
+        "following": true,
+        "imageUrl": "./50ph/0ae1d3b808de35bedd70375c4b73739a.jpg"
+    },
+    {
+     
+        "nickName": "dmitrii",
+        "following": false,
+        "imageUrl": "./50ph/5df4a2917390d09651db6acdedae708f.jpg"
+    },
+    {
+     
+        "nickName": "yarik",
+        "following": true,
+        "imageUrl": "./50ph/7bd1f3fd4905ef19f8b1664bd63ae8ae.jpg"
+    },
+    {
+      
+        "nickName": "vadim",
+        "following": true,
+        "imageUrl": "./50ph/7e2f6b8ca1acc9efd222920fda35bf23.jpg"
+    },
+    {
+      
+        "nickName": "alina",
+        "following": false,
+        "imageUrl": "./50ph/0ae1d3b808de35bedd70375c4b73739a.jpg"
+    }
+    ]

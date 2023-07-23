@@ -3,13 +3,12 @@ import { useSelector } from 'react-redux'
 import PostCard from "../post-card"
 
 const PostList = () => {
-  const authors = useSelector(state => Object.values(state.authors))
-  const posts = authors.flatMap(({ posts }) => (posts))
+  const posts = useSelector(state => Object.values(state.posts))
   return (
     <div>
       <ul>
         {posts.map(item => (
-          <PostCard key={item.id} {...item} />
+          <PostCard key={item.id} id={item._id} />
         ))}
       </ul>
     </div>

@@ -3,12 +3,17 @@ import { useSelector } from 'react-redux'
 import AuthorCard from '../author-card'
 
 export const AuthorList = () => {
-    const authors = useSelector(state => Object.values(state.authors))
+    const following = useSelector(state => Object.values(state.authors?.following)) || []
+    const notFollowing = useSelector(state => Object.values(state.authors?.notFollowing)) || []
+
     return (
         <div>
             <ul>
-                {authors.map(item => (
-                <AuthorCard key={item.id} id={item.id}/>
+                {following.map(item => (
+                <AuthorCard key={item.id} status="following" id={item._id}/>
+                ))}
+                {notFollowing.map(item => (
+                <AuthorCard key={item.id} status="notFollowing" id={item._id}/>
                 ))}
             </ul>
         </div>

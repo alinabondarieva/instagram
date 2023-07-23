@@ -39,7 +39,7 @@ const commentsReducer = (state = initialState, {type, payload})=>{
     switch (type){
         case GET_COMMENTS: 
         const newState = payload.reduce((acc, cur) => {
-            acc[cur.id] = cur
+            acc[cur._id] = cur
             return acc
         }, {})
         return newState

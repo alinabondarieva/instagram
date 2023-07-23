@@ -1,16 +1,21 @@
-import React, { useEffect, useCallback, useRef } from "react";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch} from "react-redux";
 import { HomePage } from "../pages/home";
-import { getAllAuthors } from "../store/authorReducer";
+import { getAllAuthors, getAllFollowingAuthors } from "../store/authorReducer";
+import { getAllComments } from "../store/commentsReducer";
+import { getAllPosts } from "../store/postReducer";
 
 export function Layout() {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getAllAuthors())
+        dispatch(getAllComments())
+        dispatch(getAllPosts())
+        dispatch(getAllFollowingAuthors(true))
+        dispatch(getAllFollowingAuthors(false))
     }, [dispatch])
     return (<>
-        <header className="bg-black">
+        <header className="container mx-auto">
             <div>header</div>
         </header>
         <HomePage />

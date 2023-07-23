@@ -2,23 +2,22 @@ const express = require("express")
 const app = express()
 const routes = require("./routes")
 const mongoose = require("mongoose")
-const PORT = process.env.PORT || 3000
-const URI = "mongodb+srv://pavel:Pavlo04051982@cluster0.vt04srz.mongodb.net/instagram"
-app.use(express.json())
+const PORT = process.env.PORT || 5000
+const URI = "mongodb+srv://pavel:Pavlo04051982@cluster0.vt04srz.mongodb.net/twiter"
+
 app.use(routes)
+app.use(express.json())
 
-async function start () {
-    try{
-        await mongoose.connect(URI)
-        app.listen(PORT, ()=>{
-            console.log(`Server has been started on port ${PORT}`);
-        })
-    } catch (e){
-        console.log(e)
-    }
-}
-start()
+mongoose.connect(URI)
+.then(()=>{
+    console.log("db connected");
+})
+.catch((e)=>{
+    console.log(e);
+})
 
-
+app.listen(PORT, ()=>{
+    console.log(`Server has been started on port ${PORT}`);
+})
 
 module.exports = app;

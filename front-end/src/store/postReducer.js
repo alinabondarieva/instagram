@@ -9,6 +9,7 @@ export const getAllPosts = () => async (dispatch) => {
     const res = await fetch("/api/posts")
     if (res.ok) {
         const data = await res.json()
+        console.log(data);
         dispatch(getPosts(data))
         return null
     }
@@ -22,7 +23,7 @@ const postReducer = (state = initialState, {type, payload})=>{
     switch (type){
         case GET_POSTS: 
         const newState = payload.reduce((acc, cur) => {
-            acc[cur.id] = cur
+            acc[cur._id] = cur
             return acc
         }, {})
         return newState
